@@ -10,7 +10,7 @@ let admin = (req, res, next) => {
                 msg: "token Invalido",
             });
         } else {
-            switch (decode.data.rol) {
+            switch (decode.person.rol) {
                 case "administrador":
                     console.log("Eres el administrator ):");
                     next();

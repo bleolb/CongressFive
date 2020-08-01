@@ -6,7 +6,7 @@ const {Schema} = mongoose;
 const Person = new Schema({
     rol: {
         type: String,
-        enum: ['Administrador', 'Organizador', 'Revisor', 'Ponente', 'Asistente']
+        enum: ['Administrador', 'Revisor', 'Ponente', 'Asistente']
     },
     type_dni: {
         type: String,
@@ -20,6 +20,7 @@ const Person = new Schema({
     password: {type: String},
     rol: {type: String},
     status: {type: Boolean},
+    
     
 });
 

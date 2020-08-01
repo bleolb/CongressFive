@@ -19,4 +19,4 @@ const Congress = new Schema({
     status_congress: {type: Boolean}
 });
 
-module.exports = mongoose.model('congresses', Congress);
+module.exports = mongoose.model('congress', Congress);
