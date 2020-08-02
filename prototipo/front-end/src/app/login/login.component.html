@@ -1,0 +1,55 @@
+<app-header></app-header>
+<div class="">
+  <div class="block lg:flex bg-white">
+    <div class="w-full lg:w-1/3 flex lg:border-r border-gray-200">
+      <div class="m-auto rounded-full">
+        <a href="/" class="flex items-base pt-10 lg:p-2 -mb-10 lg:-mb-0">
+          <img src="/assets/img/dot-logo.png" alt="" class="w-12 lg:w-48">
+          <div class="block lg:hidden text-2xl text-primary hover:text-primary tracking-wide font-semibold uppercase">
+            SCOC
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="w-full lg:w-2/3 px-6 py-16">
+      <div class="mb-4 font-light text-2xl">Iniciar Sesión</div>
+      <form [formGroup]="loginData">
+        <div class="mb-4">
+          <label class="block mb-2 text-sm text-gray-800">Tu correo electrónico</label>
+          <input type="email" name="email"
+                 formControlName='email'
+                 class="focus:border-blue-500 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
+                 autocomplete="email" required>
+          <div>
+            <div class="text-sm text-red-500 mt-2"></div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2 text-sm text-gray-800">Tu contraseña</label>
+          <input type="password" name="password"
+                 formControlName='password'
+                 class="focus:border-blue-500 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
+                 autocomplete="current-password" required>
+        </div>
+        <label class="mb-4 flex items-center">
+          <input type="checkbox" class="form-checkbox" name="remember" checked>
+          <span class="ml-2">Recordar contraseña</span>
+        </label>
+        <div class="block md:flex items-center justify-between">
+          <button
+            (click)="login()"
+            class="align-middle bg-blue-500 hover:bg-blue-600 text-center px-4 py-2 text-white text-sm font-semibold rounded-lg inline-block shadow-lg">
+            Ingresar
+          </button>
+
+          <a class="text-gray-600 hover:text-gray-700 no-underline block mt-3" href="#">
+            Olvidaste tu contraseña?
+          </a>
+        </div>
+      </form>
+      <div class="mt-4">
+        <label class="block mb-2 text-sm text-gray-800">No te haz registrado? <a class="text-gray-600 hover:text-blue-700" routerLink="/register">Hazlo aquí</a></label>
+      </div>
+    </div>
+  </div>
+</div>
