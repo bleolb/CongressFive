@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     if (dataLogin.person.email != '' && dataLogin.person.password != '') {
       this.personServices.login(dataLogin).subscribe((data: Data) => {
         if (data.ok) {
-         // console.log(data.token)
+          console.log(data.token)
           if (this.permissions.decodeToken(data.token)) {
             Swal.fire({
               position: 'top-end',

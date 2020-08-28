@@ -15,6 +15,7 @@ export class PermissionsService {
   constructor() {
     this.token = null;
     this.personLogin = null;
+
   }
 
   decodeTokenRol(token: string): boolean {
